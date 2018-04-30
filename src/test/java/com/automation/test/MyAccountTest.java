@@ -1,4 +1,4 @@
-package com.automation.myaccount;
+package com.automation.test;
 
 import static org.junit.Assert.*;
 import static org.testng.Assert.assertEquals;
@@ -16,14 +16,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.AutomationPractice.Pages.HomePage;
 import com.AutomationPractice.Pages.LoginPage;
 import com.AutomationPractice.Pages.MyAccount;
+import com.AutomationPractice.Pages.MyAddressesPage;
 import com.AutomationPractice.Pages.OrderHistory;
 import com.AutomationPractice.Pages.Search;
 import com.AutomationPractice.Pages.WishList;
-import com.AutomationPractice.Pages.Women;
+import com.AutomationPractice.Pages.WomenPages;
 import com.AutomationPractice.Pages.ContactUs;
 import com.AutomationPractice.Pages.CreditSlip;
 import com.automation.login.VerifyLogin;
-import com.automation.myaccount.pages.MyAddresses;
 
 import junit.framework.Assert;
 
@@ -109,7 +109,7 @@ public class MyAccountTest {
 	}
 	@Test
 	public void verifyAddresses() {
-		MyAddresses myaddresses=myAccount.clickMyAddresses();
+		MyAddressesPage myaddresses=myAccount.clickMyAddresses();
 		String title=myaddresses.getTitle();
 		Assert.assertEquals("Addresses - My Store", title);
 		driver.navigate().back();
@@ -138,7 +138,7 @@ public class MyAccountTest {
 	}
 	@Test
 	public void verifyWomen() {
-		Women women=myAccount.clickOnWomen();
+		WomenPages women=myAccount.clickOnWomen();
 		String title=women.getTitle();
 		assertEquals("Women - My Store", title);
 		driver.navigate().back();

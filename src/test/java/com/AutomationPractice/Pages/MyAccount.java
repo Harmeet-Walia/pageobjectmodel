@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.automation.myaccount.pages.MyAddresses;
-
 import junit.framework.Assert;
 
 public class MyAccount {
@@ -56,9 +54,9 @@ public class MyAccount {
 		return new OrderHistory(driver);
 	}
 	
-	public MyAddresses clickMyAddresses() {
+	public MyAddressesPage clickMyAddresses() {
 		getAddresses().click();
-		return new MyAddresses(driver);
+		return new MyAddressesPage(driver);
 	}
 	
 	public WebElement getAddresses() {
@@ -89,10 +87,10 @@ public class MyAccount {
 		return element;
 	}
 	
-	public Women clickOnWomen() {
+	public WomenPages clickOnWomen() {
 		WebElement element=driver.findElement(women);
 		element.click();
-		return new Women(driver);
+		return new WomenPages(driver);
 	}
 	public WebElement getCart() {
 		WebElement element=driver.findElement(cart);
