@@ -38,18 +38,35 @@ public class WomenPageTest {
 		
 	}
 	
-	@Test
-	public void verifyResultsofBlue() {
-		womenpage.clickBlueColour();
-		Assert.assertTrue(womenpage.isBlueButtonClicked());
-		
-		
-	}
+//	@Test
+//	public void verifyResultsofBlue() {
+//		womenpage.clickBlueColour();
+//		Assert.assertTrue(womenpage.isBlueButtonClicked());
+//		Assert.assertTrue(womenpage.IsfadedShortSleeveTshirtsVisible());
+//		
+//		
+//	}
+//	
+//	@Test
+//	public void verifyResultsofOrange() {
+//		womenpage.clickOrangeColourElement();
+//		Assert.assertTrue(womenpage.isOrangeButtonClicked());
+//	}
+//	
+//	@Test
+//	public void verifyResultsOfPink() {
+//		womenpage.clickPinkColour();
+//		Assert.assertTrue(womenpage.IsPinkColourClicked());
+//	}
 	
 	@Test
-	public void verifyResultsofOrange() {
-		womenpage.clickOrangeColourElement();
-		Assert.assertTrue(womenpage.isOrangeButtonClicked());
+	public void verifyCheckBoxTopsResults() {
+		womenpage.clickCheckBoxTops();
+		Assert.assertTrue(womenpage.isCheckBoxTopsSelected());
+		Assert.assertTrue(womenpage.IsBlackBlouseImageAvailable());
 	}
+	
+	
+
 
 }
